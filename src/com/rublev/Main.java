@@ -3,10 +3,10 @@ package com.rublev;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public final class Main {
 
   public static void main(String[] args) {
-    final int deckRank = 13;
+    final int deckRank = 14;
     List<Card> deck = new ArrayList();
     for (int i = 2; i <= deckRank; i++) {
       deck.add(new Card("CLUBS", i));

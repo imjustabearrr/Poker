@@ -7,36 +7,36 @@ import java.util.Map;
 final class Card {
 
   private String suit;
-  private String rank;
+  private Integer rank;
 
   Card(String suit, Integer rank) {
     this.suit = Suits.valueOf(suit).getTitle();
-    this.rank = getRanks().get(rank);
+    this.rank = Ranks.valueOf(getRanks().get(rank)).getRank();
   }
 
   String getSuit() {
     return this.suit;
   }
 
-  String getRank() {
+  Integer getRank() {
     return this.rank;
   }
 
   private Map<Integer, String> getRanks() {
     Map<Integer, String> ranks = new HashMap<>();
-    ranks.put(2, "two");
-    ranks.put(3, "three");
-    ranks.put(4, "four");
-    ranks.put(5, "five");
-    ranks.put(6, "six");
-    ranks.put(7, "seven");
-    ranks.put(8, "eight");
-    ranks.put(9, "nine");
-    ranks.put(10, "ten");
-    ranks.put(11, "jack");
-    ranks.put(12, "queen");
-    ranks.put(13, "king");
-    ranks.put(14, "ace");
+    ranks.put(2, "TWO");
+    ranks.put(3, "THREE");
+    ranks.put(4, "FOUR");
+    ranks.put(5, "FIVE");
+    ranks.put(6, "SIX");
+    ranks.put(7, "SEVEN");
+    ranks.put(8, "EIGHT");
+    ranks.put(9, "NINE");
+    ranks.put(10, "TEN");
+    ranks.put(11, "JACK");
+    ranks.put(12, "QUEEN");
+    ranks.put(13, "KING");
+    ranks.put(14, "ACE");
     return ranks;
   }
 }
